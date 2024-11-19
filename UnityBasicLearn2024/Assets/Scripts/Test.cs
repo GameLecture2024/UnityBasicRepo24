@@ -2,28 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Test : MonoBehaviour
+namespace UnityBasic
 {
-    // Start is called before the first frame update
-    void Start()
+    public class Test : MonoBehaviour
     {
-        string aFreind = "Bill";
+        public int testCount;
 
-        Debug.Log($"내 친구의 이름은 {aFreind}입니다.");
-   
+        public TempMyCode tempMyCode;
 
-        Debug.Log("Hello Unity");
+        // Start is called before the first frame update
+        void Start()
+        {
+            testCount = 3;
+
+            if (tempMyCode.ab < testCount)
+            {
+                Debug.Log($"temp의 값 : {tempMyCode.ab}, testCount의 값 : {testCount}");
+            }
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+
+        }
+
+
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-
-    private void OnTriggerEnter(Collider other)
-    {
-        
-    }
 }
